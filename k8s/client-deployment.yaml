@@ -1,13 +1,13 @@
 apiVersion: apps/v1
-kind: Deployment
+kind: Deployment # Maintains a set of identical pods, ensuring that they have the correct config and that the right number (1 pod, 2 pod, 3 pod, etc.) exists
 metadata:
   name: client-deployment
 spec:
-  replicas: 3
-  selector:
+  replicas: 3 # Create exactly x pod using this template
+  selector: # Selects the newly created pod(s) with corresponding label
     matchLabels:
       component: web
-  template:
+  template: # The exact configuration that should be used by this deployment
     metadata:
       labels:
         component: web

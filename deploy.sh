@@ -1,3 +1,4 @@
+# Unique version identifier corresponding to a git commit; good for debugging
 docker build -t garzeah/multi-client:latest -t garzeah/multi-client:$SHA -f ./client/Dockerfile ./client
 docker build -t garzeah/multi-server:latest -t garzeah/multi-server:$SHA -f ./server/Dockerfile ./server
 docker build -t garzeah/multi-worker:latest -t garzeah/multi-worker:$SHA -f ./worker/Dockerfile ./worker
